@@ -1,0 +1,49 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Income and Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Income and Expense Tracker</h1>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input type="text" id="description" placeholder="e.g. Salary, Grocery" />
+    </div>
+
+    <div class="form-group">
+      <label for="amount">Amount</label>
+      <input type="number" id="amount" placeholder="Enter amount" />
+    </div>
+
+    <div class="form-group">
+      <label for="type">Type</label>
+      <select id="type">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+    </div>
+
+    <button onclick="addTransaction()">Add Transaction</button>
+
+    <div class="summary">
+      <h2>Summary</h2>
+      <p><strong>Total Income:</strong> ₱<span id="totalIncome">0.00</span></p>
+      <p><strong>Total Expense:</strong> ₱<span id="totalExpense">0.00</span></p>
+      <p class="balance"><strong>Balance:</strong> ₱<span id="balance">0.00</span></p>
+    </div>
+
+    <div class="history">
+      <h2>Transaction History</h2>
+      <ul id="transactionList"></ul>
+    </div>
+  </div>
+
+</body>
+</html>
